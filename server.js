@@ -15,6 +15,10 @@ mongoose.connect(process.env.MONGO_URI)
 const userRoutes = require("./routes/userRoutes")
 app.use("/api", userRoutes)
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀")
+})
+
 app.listen(3001, () => {
   console.log("Server running on port 3001 🚀")
 })
