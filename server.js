@@ -17,6 +17,9 @@ mongoose.connect(process.env.MONGO_URI)
 const userRoutes = require("./routes/userRoutes")
 app.use("/api", userRoutes)
 
+const noteRoutes = require("./routes/noteRoutes")
+app.use("/api", noteRoutes)
+
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀")
 })
